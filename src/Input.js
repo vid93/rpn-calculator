@@ -29,16 +29,16 @@ const Input = () => {
                 let a = stack.pop()
                 let b = stack.pop()
                 if(input[i] === "+") {
-                    stack.push(parseFloat(a) + parseFloat(b));
+                    stack.push((parseFloat(a) + parseFloat(b)).toFixed(2))
                     operators++;
                   } else if(input[i] === "-") {
-                      stack.push(parseFloat(b) - parseInt(a));
+                      stack.push((parseFloat(a) - parseFloat(b)).toFixed(2))
                       operators++;
                   } else if(input[i] === "*") {
-                      stack.push(parseFloat(a) * parseFloat(b));
+                      stack.push((parseFloat(a) * parseFloat(b)).toFixed(2))
                       operators++;
                   } else if(input[i] === "/") {
-                      stack.push(parseFloat(b) / parseFloat(a));
+                      stack.push((parseFloat(a) / parseFloat(b)).toFixed(2))
                       operators++;
                   }
             }
